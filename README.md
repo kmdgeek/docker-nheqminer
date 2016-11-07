@@ -1,4 +1,4 @@
-# docker-cpuminer-multi  
+# docker-nheqminer  
 This is a docker for nheqminer (<https://github.com/nicehash/nheqminer>). It work well with nicehash and many other mining pool.
 
 ### Usage:  
