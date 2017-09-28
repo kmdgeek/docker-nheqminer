@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu
 MAINTAINER kmd.geek
 
 RUN apt-get update && \
@@ -12,7 +12,8 @@ RUN apt-get update && \
     make -j $(nproc) && \
     cp nheqminer_cpu_xenoncat /nheqminer && \
     rm -rf /tmp/* && \
-    chmod +x /nheqminer
+    chmod +x /nheqminer && \
+    apt-get autoremove -y git cmake build-essential
 
 WORKDIR /
 CMD ["/nheqminer -h"]
